@@ -1,0 +1,58 @@
+============================================================
+BENCHMARK REPORT: Chien luoc [RecursiveChunker(chunk_size=400)]
+Backend: MockEmbedder (MD5 hash)
+Tong so chunks nap vao store: 64 chunks tu 6 files
+============================================================
+
+Query #1: Sinh viên năm thứ mấy và cần đạt kết quả học tập thế nào để đủ điều kiện xét học bổng EVN?
+  [Gold Doc ID]: hoc-bong-evn
+  [Top-1 Doc ID]: co-cau-doi-ngu-can-bo-giang-vien#0 (Score: 0.2838)
+  [Top-1 Content Preview]: # Thống kê đội ngũ cán bộ giảng viên theo chức danh khoa học và trình độ đào tạo  Số liệu thống kê cơ bản về nhân lực ĐH...
+  [Top-1 Relevant?]: KHONG | [Top-3 Relevant?]: CO
+  [Agent Answer]: Mock Answer
+
+Query #2: Thời gian nghỉ Tết Nguyên đán năm học 2025-2026 của sinh viên chính quy kéo dài từ ngày nào đến ngày nào?
+  [Gold Doc ID]: ke-hoach-dao-tao-nam-hoc
+  [Top-1 Doc ID]: chuong-trinh-dao-tao-dai-hoc#21 (Score: 0.3655)
+  [Top-1 Content Preview]: | 3 | Quản trị Nhân lực và Nhân tài |  | 1 |  | | 4 | Quản trị và An ninh |  | 1 |  | | XI. Trường Đại học Luật |  |  | ...
+  [Top-1 Relevant?]: KHONG | [Top-3 Relevant?]: KHONG
+  [Agent Answer]: Mock Answer
+
+Query #3: Phương thức 2 của Trường ĐH Khoa học Tự nhiên năm 2026 áp dụng nhân hệ số 2 môn Toán cho những ngành nào?
+  [Gold Doc ID]: phuong-thuc-xet-tuyen-hus
+  [Top-1 Doc ID]: chuong-trinh-dao-tao-dai-hoc#21 (Score: 0.2388)
+  [Top-1 Content Preview]: | 3 | Quản trị Nhân lực và Nhân tài |  | 1 |  | | 4 | Quản trị và An ninh |  | 1 |  | | XI. Trường Đại học Luật |  |  | ...
+  [Top-1 Relevant?]: KHONG | [Top-3 Relevant?]: KHONG
+  [Agent Answer]: Mock Answer
+
+Query #4: Chương trình trao đổi sinh viên tại Đại học Osaka kỳ Xuân 2027 có bao nhiêu chỉ tiêu và yêu cầu điểm GPA tối thiểu là bao nhiêu?
+  [Gold Doc ID]: trao-doi-sinh-vien-osaka
+  [Top-1 Doc ID]: phuong-thuc-xet-tuyen-hus#1 (Score: 0.2829)
+  [Top-1 Content Preview]: - Phương thức 3 (Mã 401): Xét điểm thi Đánh giá năng lực (HSA) do ĐHQGHN tổ chức (Yêu cầu đạt tối thiểu 65/150 điểm, chứ...
+  [Top-1 Relevant?]: KHONG | [Top-3 Relevant?]: KHONG
+  [Agent Answer]: Mock Answer
+
+Query #5: Số lượng và danh mục các chương trình đào tạo chuẩn và đặc thù của Trường Đại học Công nghệ là gì?
+  [Filter ap dung]: {'audience': 'student'}
+  [Gold Doc ID]: chuong-trinh-dao-tao-dai-hoc
+  [Top-1 Doc ID]: chuong-trinh-dao-tao-dai-hoc#2 (Score: 0.3581)
+  [Top-1 Content Preview]: | 6 | Kỹ thuật năng lượng (CTĐT thí điểm) | 1 |  |  | | 7 | Vật lý kỹ thuật | 1 |  |  | | 8 | Cơ kỹ thuật | 1 |  |  | | ...
+  [Top-1 Relevant?]: CO | [Top-3 Relevant?]: CO
+  [Agent Answer]: Mock Answer
+
+------------------------------------------------------------
+KET QUA TONG KET:
+  - Top-1 Accuracy: 1/5 (20.0%)
+  - Top-3 Accuracy: 2/5 (40.0%)
+------------------------------------------------------------
+
+=== A/B TEST REPORT (QUERY 5): Co Filter vs Khong Filter ===
+1. Khi KHONG dung filter (Dua tren similarity thuan tuy):
+   Top-1: chuong-trinh-dao-tao-dai-hoc#2 (Audience: student) - Score: 0.3581
+   Top-2: phuong-thuc-xet-tuyen-hus#5 (Audience: student) - Score: 0.2712
+   Top-3: library-services#1 (Audience: all               # student | faculty | staff | all) - Score: 0.2620
+2. Khi CO dung filter {'audience': 'student'}:
+   Top-1: chuong-trinh-dao-tao-dai-hoc#2 (Audience: student) - Score: 0.3581
+   Top-2: phuong-thuc-xet-tuyen-hus#5 (Audience: student) - Score: 0.2712
+   Top-3: chuong-trinh-dao-tao-dai-hoc#20 (Audience: student) - Score: 0.2093
+============================================================
